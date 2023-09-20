@@ -50,22 +50,22 @@ input[name="point"] {
 }
 
 .slider__nav {
-  margin-top: -4.5%;
-  height: 4rem;
+  margin-top: -4%;
   display: flex;
   justify-content: flex-end;
-  overflow: hidden;
+  height: 2rem;
 }
 
 .slider__nav label {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 2rem;
-  height: 1.6rem;
-  border-radius: 50%;
+  height: 1em;
+  width: 1em;
+  margin: 0.4em;
   cursor: pointer;
+  background-color: #fbec5d;
+  border: 0.2em solid #666666;
+  border-radius: 50%;
   transition: 0.3s;
+  cursor: pointer;
 }
 
 .slider__nav label:hover {
@@ -76,49 +76,29 @@ input[name="point"] {
   transform: scale(0.8);
 }
 
-.slider__nav-dot {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 1rem;
-  height: 1rem;
-  background-color: #fbec5d;
-  border-radius: 50%;
-}
-
-.slider__nav-sub-dot {
-  width: 0.6rem;
-  height: 0.6rem;
-  border-radius: 50%;
-}
-
-label:hover .slider__nav-dot .slider__nav-sub-dot,
-label:active .slider__nav-dot .slider__nav-sub-dot,
-#slide1:checked ~ .slider__nav label:nth-of-type(1) .slider__nav-sub-dot,
-#slide2:checked ~ .slider__nav label:nth-of-type(2) .slider__nav-sub-dot,
-#slide3:checked ~ .slider__nav label:nth-of-type(3) .slider__nav-sub-dot,
-#slide4:checked ~ .slider__nav label:nth-of-type(4) .slider__nav-sub-dot {
-  background-color: #545454;
-}
+/* 
+.slider label:hover,
+#slide1:checked ~ .slider__nav > label:nth-of-type(1):hover,
+#slide2:checked ~ .slider__nav label:nth-of-type(2),
+#slide3:checked ~ .slider__nav label:nth-of-type(3),
+#slide4:checked ~ .slider__nav label:nth-of-type(4) {
+ background-color: #fff;
+} */
 
 #slide1:checked ~ .current {margin-left: 0;}
-
 #slide2:checked ~ .current {margin-left: -25%;}
-
 #slide3:checked ~ .current {margin-left: -50%;}
-
 #slide4:checked ~ .current {margin-left: -75%;}
 
-@media (max-width: 1928px) {
+@media (max-width: 1440px) {
   .slider__nav {
-    margin-top: -3%;
+    margin-top: -5%;
   }
 }
 
 @media (max-width: 1024px) {
   .slider__nav {
     margin-top: -6%;
-    height: 3rem;
   }
 }
 
@@ -139,11 +119,17 @@ label:active .slider__nav-dot .slider__nav-sub-dot,
 
   .slider__nav {
     justify-content: center;
-    margin-top: -14.5%;
+    margin-top: -13%;
     height: 3rem;
   }
 
   h3 {
     margin-top: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .slider__nav {
+    margin-top: -19%;
   }
 }
